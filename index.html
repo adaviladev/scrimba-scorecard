@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="styles.css">
+        <link href="https://fonts.googleapis.com/css2?family=Saira+Semi+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <div class="score">
+                <h3>HOME</h3>
+                <p id="home-score">0</p>
+                <button id="add-one-home" onclick="add1Home()">+1</button>
+                <button id="add-two-home" onclick="add2Home()">+2</button>
+                <button id="add-three-home" onclick="add3Home()">+3</button>
+            </div>
+            <div class="score">
+                <h3>GUEST</h3>
+                <p id="guest-score">0</p>
+                <button id="add-one-guest" onclick="add1Guest()">+1</button>
+                <button id="add-two-guest" onclick="add2Guest()">+2</button>
+                <button id="add-three-guest" onclick="add3Guest()">+3</button>
+            </div>
+        </div>
+        <button id="n-game" onclick="resetScore()">New Game</button>
+        <script src="script.js"></script>
+    </body>
+</html>

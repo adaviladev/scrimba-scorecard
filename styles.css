@@ -1,0 +1,64 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    background-color: #20242A;
+    border-radius: 25px 100px 25px 100px;
+    width: 575px;
+    height: 385px;
+}
+
+h3 {
+    color: #EEEEEE;
+    text-align: center;
+    font-size: 40px;
+    font-family: "Saira Semi Condensed", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    margin: 0;
+}
+
+.score {
+    margin-top: 65px;
+    text-align: center;
+
+}
+
+.score p {
+    font-size: 90px;
+    margin: auto;
+}
+
+#home-score, #guest-score{
+    background-color: black;
+    border-radius: 5px;
+    color: #F94F6D;
+    width: 155px;
+    height: 120px
+    
+}
+
+button {
+    width: 45px;
+    height: 45px;
+    margin: 5px;
+    margin-top: 20px;
+    color: white;
+    background-color: transparent;
+    border: 1px solid #9AABD8;
+    border-radius: 5px;
+}
+
+#n-game {
+    color: white;
+    width: fit-content;
+    background-color: #20242A;;
+    border-radius: 5px 5px 5px 5px;
+    margin-top: -60px;
+}
