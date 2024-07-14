@@ -62,8 +62,35 @@ document.addEventListener("click", function(event) {
 // }
 
 function resetScore() {
-    homeScore = 0;
-    guestScore = 0;
-    homeStoreEl.textContent = homeScore;
-    guestStoreEl.textContent = guestScore
+    homeStoreEl.textContent = 0;
+    guestStoreEl.textContent = 0
 }
+
+// Timer
+
+let timeRemaining = 48 * 60; // 48 minutes in seconds
+let timerInterval;
+
+function updateTimer() {
+    const minutes = Math.floor(timeRemaining / 60);
+    const seconds = timeRemaining % 60;
+
+    document.getElementById('timer').textContent = 
+        `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+
+    if (timeRemaining > 0) {
+        timeRemaining--;
+    } else {
+        clearInterval(timerInterval);
+        alert('The match has ended!');
+    }
+}
+
+document.getElementById('n-game').addEventListener('click', function() {
+    if (timerInterval) {
+        clearInterval(timerInterval); // Clear any existing timer
+    }
+    timeRemaining = 48 * 60; // Reset time
+    updateTimer(); // Initial call to set the timer immediately
+    timerInterval = setInterval(updateTimer, 1000); // Start the timer
+});
